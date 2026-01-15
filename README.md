@@ -25,7 +25,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ## Repository Structure
 
-### **01-kernel-fundamentals/**
+### **[01-kernel-fundamentals/](./01-kernel-fundamentals)**
 > Foundation concepts: What is a kernel? Why monolithic? How CPU rings enforce privilege separation.
 
 **Covers:**
@@ -36,7 +36,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **02-memory-architecture/**
+### **[02-memory-architecture/](./02-memory-architecture)**
 > How virtual memory, MMU, and page tables create process isolation and enable safe kernel/user communication.
 
 **Covers:**
@@ -47,7 +47,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **03-hardware-kernel-interface/**
+### **[03-hardware-kernel-interface/](./03-hardware-kernel-interface)**
 > The bridge between hardware and software: interrupts, system calls, and Ring 3↔Ring 0 transitions.
 
 **Covers:**
@@ -57,7 +57,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **04-device-drivers/**
+### **[04-device-drivers/](./04-device-drivers)**
 > Character devices, device files, IOCTL interface, and the file_operations structure.
 
 **Covers:**
@@ -68,7 +68,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **05-synchronization/**
+### **[05-synchronization/](./05-synchronization)**
 > Kernel synchronization primitives: wait queues, blocking I/O, spinlocks, and mutexes.
 
 **Covers:**
@@ -79,7 +79,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **06-kernel-apis/**
+### **[06-kernel-apis/](./06-kernel-apis)**
 > Essential kernel APIs for driver development: memory allocation, user↔kernel data transfer, logging, and error handling.
 
 **Covers:**
@@ -90,7 +90,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **07-development-workflow/**
+### **[07-development-workflow/](./07-development-workflow)**
 > Practical guide to building, testing, and debugging kernel modules.
 
 **Covers:**
@@ -100,7 +100,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **08-upstream-process/**
+### **[08-upstream-process/](./08-upstream-process)**
 > Brief overview of the kernel contribution process: patches, code review, and community interaction.
 
 **Covers:**
@@ -128,32 +128,6 @@ The content is designed to be explored sequentially for beginners, or referenced
 - Learn hardware constraints that drive software design
 - See the full picture: from CPU instructions to kernel APIs
 - Build practical skills through real module development
-
----
-
-## Technologies & Tools
-
-**Operating Systems:**
-- Linux kernel (various versions)
-- Ubuntu, Debian, Fedora, RHEL
-
-**Development Tools:**
-- GCC compiler and Make
-- Git version control
-- Kernel headers and build system
-
-**Debugging & Testing:**
-- printk() and dmesg
-- kgdb (kernel debugger)
-- QEMU for virtualization
-- ftrace and perf
-
-**Key APIs & Concepts:**
-- Character/Block device drivers
-- System call interface
-- Memory management (kmalloc, vmalloc)
-- Synchronization primitives (spinlocks, mutexes)
-- Interrupt handling
 
 ---
 
@@ -212,12 +186,13 @@ I'm actively learning and building in the **systems programming** and **kernel d
 
 ### ⭐ Star this repository if you find it helpful for your kernel development journey!
 
+---
+
+> **For detailed explanations, navigate to individual topic folders. Each contains a comprehensive README covering its area.**
+
+
 <div align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1000&color=60A5FA&center=true&vCenter=true&width=600&lines=Understanding+How+Linux+Works;From+Hardware+to+Kernel;Building+Real+Device+Drivers;Learning+in+Public" alt="Typing SVG" />
 
 </div>
-
----
-
-> **For detailed technical explanations, navigate to individual topic folders. Each contains a comprehensive README covering its area.**
