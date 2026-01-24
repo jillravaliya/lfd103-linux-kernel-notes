@@ -1,6 +1,6 @@
 # Linux Kernel Development Notes
 
-![Topics](https://img.shields.io/badge/Topics-08-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=grey)
+![Topics](https://img.shields.io/badge/Topics-07-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=grey)
 ![Focus](https://img.shields.io/badge/Focus-Kernel%20Development-EE4444?style=for-the-badge&logo=target&logoColor=white&labelColor=grey)
 ![Status](https://img.shields.io/badge/Status-Working-13AA52?style=for-the-badge&logo=buffer&logoColor=white&labelColor=grey)
 ![License](https://img.shields.io/badge/License-GPL--2.0%20%7C%20CC--BY--SA--4.0-1D96E8?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=grey)
@@ -130,7 +130,7 @@ The content is designed to be explored sequentially for beginners, or referenced
 ## What's Not Included
 
 This repository does **not** cover:
-- Specific kernel subsystems in depth (networking, filesystems, etc.)
+- Specific kernel subsystems in depth 
 - Complete driver implementation tutorials
 - Kernel configuration deep-dives
 - Architecture-specific details (ARM, x86-64 internals, etc.)
