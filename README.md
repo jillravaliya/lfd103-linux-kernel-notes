@@ -2,7 +2,7 @@
 
 ![Topics](https://img.shields.io/badge/Topics-08-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=grey)
 ![Focus](https://img.shields.io/badge/Focus-Kernel%20Development-EE4444?style=for-the-badge&logo=target&logoColor=white&labelColor=grey)
-![Status](https://img.shields.io/badge/Status-Active-13AA52?style=for-the-badge&logo=buffer&logoColor=white&labelColor=grey)
+![Status](https://img.shields.io/badge/Status-Working-13AA52?style=for-the-badge&logo=buffer&logoColor=white&labelColor=grey)
 ![License](https://img.shields.io/badge/License-GPL--2.0%20%7C%20CC--BY--SA--4.0-1D96E8?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=grey)
 
 > A technical deep-dive into kernel internals, device driver architecture, and the development process — built while learning kernel contribution workflows.
@@ -30,83 +30,79 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 **Covers:**
 - Kernel vs Operating System
-- Kernel types (Monolithic, Microkernel, Hybrid)
 - CPU privilege rings (Ring 0 vs Ring 3)
 - Protected instructions and hardware enforcement
+- Monolithic vs Microkernel architecture
 
 ---
 
-### **[02-memory-architecture/](./02-memory-architecture)**
-> How virtual memory, MMU, and page tables create process isolation and enable safe kernel/user communication.
+### **[02-kernel-architecture/](./02-kernel-architecture)**
+> Core kernel subsystems: how processes run, how memory gets allocated, how hardware interrupts reach the CPU.
 
 **Covers:**
-- Virtual vs Physical memory
-- Memory Management Unit (MMU)
-- Page tables and address translation
-- User/Kernel space separation
+- Process scheduler (how multitasking actually works)
+- fork() and exit() (process lifecycle)
+- System calls (user→kernel transitions)
+- Hardware interrupts and deferred work
 
 ---
 
-### **[03-hardware-kernel-interface/](./03-hardware-kernel-interface)**
-> The bridge between hardware and software: interrupts, system calls, and Ring 3↔Ring 0 transitions.
+### **[03-memory-management/](./03-memory-management)**
+> Memory management internals: from page faults to swap, how the kernel manages RAM.
 
 **Covers:**
-- Interrupts (how hardware signals kernel)
-- System calls (how user programs request kernel services)
-- Ring transitions (the actual CPU-level mechanism)
+- Virtual memory and page fault handling
+- Physical page allocation (buddy allocator)
+- Page cache (why repeated file reads are fast)
+- Swapping (what happens when RAM is full)
+- kmalloc vs vmalloc (kernel memory allocation)
 
 ---
 
-### **[04-device-drivers/](./04-device-drivers)**
-> Character devices, device files, IOCTL interface, and the file_operations structure.
+### **[04-linux-x86-architecture/](./04-linux-x86-architecture)** 
+> x86-specific implementation: how Intel/AMD CPUs actually do syscalls, interrupts, and memory translation.
 
 **Covers:**
-- Character vs Block devices
-- Device files (/dev/X)
-- IOCTL command interface
-- file_operations structure
+- SYSCALL instruction (how system calls enter kernel)
+- CPU exceptions and hardware interrupts
+- Context switching (saving/restoring CPU state)
+- x86 page tables (4-level translation)
+- APIC (routing interrupts to multiple CPUs)
+- TLB (caching address translations)
+
 
 ---
 
-### **[05-synchronization/](./05-synchronization)**
-> Kernel synchronization primitives: wait queues, blocking I/O, spinlocks, and mutexes.
+### **[05-device-drivers/](./05-device-drivers)** 🚧
+> Writing kernel modules: character devices, talking to hardware, and not crashing the kernel.
 
 **Covers:**
-- Wait queues (how blocking I/O works)
-- Process sleep/wake mechanisms
-- Spinlocks vs Mutexes
-- Race condition prevention
+- Character device basics (open/read/write/ioctl)
+- copy_to_user/copy_from_user (safe data transfer)
+- Wait queues (blocking I/O without busy-waiting)
+- Spinlocks and mutexes (preventing race conditions)
 
 ---
 
-### **[06-kernel-apis/](./06-kernel-apis)**
-> Essential kernel APIs for driver development: memory allocation, user↔kernel data transfer, logging, and error handling.
+### **[06-filesystem-layer/](./06-filesystem-layer)** 🚧
+> How files actually work: from open() to disk blocks, the layers between /dev and ext4.
 
 **Covers:**
-- copy_to_user() / copy_from_user()
-- kmalloc() / kfree() and GFP flags
-- printk() and kernel logging
-- Standard error codes
+- VFS (why Linux supports multiple filesystems)
+- Inodes and directory entries
+- ext4 on-disk format (where your files live)
+- devtmpfs (how /dev/sda appears automatically)
 
 ---
 
-### **[07-development-workflow/](./07-development-workflow)**
-> Practical guide to building, testing, and debugging kernel modules.
+### **[07-network-stack/](./07-network-stack)** 🚧
+> Network internals: from socket() to the wire, how packets move through the kernel.
 
 **Covers:**
-- Module compilation (make, Kconfig)
-- Testing strategies
-- Debugging techniques (dmesg, kgdb, etc.)
-
----
-
-### **[08-upstream-process/](./08-upstream-process)**
-> Brief overview of the kernel contribution process: patches, code review, and community interaction.
-
-**Covers:**
-- Patch workflow (format, send, review)
-- Community guidelines and code of conduct
-
+- Socket layer (the interface programs use)
+- sk_buff (how kernel represents packets)
+- Network device drivers (sending/receiving packets)
+- Interrupt handling (NAPI polling)
 ---
 
 ## Context
@@ -119,7 +115,7 @@ Topics are organized by concept area rather than chronologically, with each sect
 
 ## Learning Approach
 
-**Start with foundations, build incrementally:**
+> **Start with foundations, build incrementally:**
 
 The content is designed to be explored sequentially for beginners, or referenced as needed for specific topics. Each README dives deep into a single concept area with clear explanations of both mechanisms and reasoning.
 
@@ -145,14 +141,14 @@ Focus is on **foundational concepts** and **development workflows** that apply a
 
 ## License
 
-Documentation released under CC-BY-SA-4.0.  
-Code examples (if any) under GPL-2.0 (kernel module standard).
+- Documentation released under CC-BY-SA-4.0.  
+- Code examples (if any) under GPL-2.0 (kernel module standard).
 
 ---
 
 ## Author
 
-Built by **Jill Ravaliya** while learning kernel development workflows and device driver fundamentals.
+> Built by **Jill Ravaliya** while learning kernel development workflows and device driver fundamentals.
 
 **Focus Areas:**
 - Kernel internals and hardware interfaces
