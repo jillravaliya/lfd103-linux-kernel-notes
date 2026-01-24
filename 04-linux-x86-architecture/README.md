@@ -15,7 +15,7 @@
 
 The Linux kernel runs on everything from phones to supercomputers, but each CPU architecture is **fundamentally different**. The `arch/` directory is the bridge between hardware and the generic kernel — where CPU-specific assembly meets portable C code.
 
-This repository explores **arch/x86/** — the Intel/AMD implementation that powers most desktops and servers:
+> This repository explores **arch/x86/** — the Intel/AMD implementation that powers most desktops and servers:
 
 - **How x86 hardware actually works** (SYSCALL, IDT, APIC, CR3 registers)
 - **Why arch/ exists** (CPU differences, abstraction layers, portability)
@@ -217,32 +217,6 @@ Generic kernel works on BOTH architectures!
 - Initial page table setup
 
 **Why essential:** Understand what happens BEFORE kernel starts!
-
----
-
-### **[include/](./include)**
-> x86 data structures, register definitions, and hardware constants.
-
-**Covers:**
-- CPU register definitions (CR0-CR4, EFLAGS, MSRs)
-- x86 page table entry format
-- Processor structures (task_struct extensions)
-- Hardware constants and macros
-
-**Why essential:** Reference material for x86 hardware interfaces!
-
----
-
-### **[lib/](./lib)**
-> Hand-optimized assembly functions for performance-critical operations.
-
-**Covers:**
-- Optimized memcpy/memset (x86 assembly)
-- Fast checksums (SSE/AVX instructions)
-- String operations
-- Performance tricks and CPU-specific optimizations
-
-**Why essential:** See how experts squeeze every cycle from x86!
 
 ---
 
