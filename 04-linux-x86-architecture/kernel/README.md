@@ -181,7 +181,7 @@ Middle processing: Generic (kernel/, fs/)
 
 ## Repository Structure
 
-### [entry_64.S/](./entry_64.S.md)
+### **[entry_64.S/](./entry_64.S/README.md)**
 > The gateway from user space to kernel — where SYSCALL happens.
 
 **Covers:**
@@ -196,7 +196,7 @@ Middle processing: Generic (kernel/, fs/)
 
 ---
 
-### [traps.c/](./traps.c.md)
+### **[traps.c/](./traps.c/README.md)**
 > How x86 CPUs handle errors — page faults, divide-by-zero, invalid opcodes.
 
 **Covers:**
@@ -211,7 +211,7 @@ Middle processing: Generic (kernel/, fs/)
 
 ---
 
-### [irq.c/](./irq.c.md)
+### **[irq.c/](./irq.c/README.md)**
 > How hardware devices get the CPU's attention — keyboard, network, disk, timer.
 
 **Covers:**
@@ -226,7 +226,7 @@ Middle processing: Generic (kernel/, fs/)
 
 ---
 
-### [process.c/](./process.c.md)
+### **[process.c/](./process.c/README.md)**
 > How x86 CPUs switch between programs — the multitasking mechanism.
 
 **Covers:**
@@ -241,7 +241,7 @@ Middle processing: Generic (kernel/, fs/)
 
 ---
 
-### [cpu/](./cpu/README.md)
+### **[cpu/](./cpu/README.md)**
 > How Linux discovers what CPU it's running on — features, bugs, capabilities.
 
 **Covers:**
@@ -256,7 +256,7 @@ Middle processing: Generic (kernel/, fs/)
 
 ---
 
-### [apic/](./apic/README.md)
+### **[apic/](./apic/README.md)**
 > Modern interrupt controller — routing interrupts to multi-core CPUs.
 
 **Covers:**
