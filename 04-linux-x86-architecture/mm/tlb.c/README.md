@@ -1,44 +1,6 @@
 ## FOUNDATION COMPLETE :
 
 
-### kernel/ directory:
-1. kernel/sched/core.c - Process Scheduler
-2. kernel/fork.c - Process Creation
-3. kernel/signal.c - Signal Handling
-4. kernel/exit.c - Process Termination
-5. kernel/sys.c - System Call Infrastructure
-6. kernel/time/ - Time Management
-7. kernel/irq/ - Interrupt Handling
-8. kernel/workqueue.c - Deferred Work
-
----
-
-### mm/ directory:
-10.  mm/memory.c - Virtual Memory & Page Faults
-11. mm/mmap.c - Memory Mapping
-12. mm/page_alloc.c - Physical Page Allocation (Buddy)
-13. mm/slub.c - Slab Allocator
-14. mm/filemap.c - Page Cache
-15. mm/swap.c - Swapping
-16. mm/vmscan.c - Page Reclaiming
-17. mm/vmalloc.c - Large Kernel Allocations
-18. mm/readahead.c - File Prefetching
-19. mm/mprotect.c - Memory Protection
-20. mm/kmalloc.c - Small Kernel Allocations
-21. mm/oom_kill.c - Out of Memory Handling
-
----
-
-### arch/x86/kernel/ COMPLETE (100%):
-21. arch/x86/kernel/entry_64.S - System Call Entry
-22. arch/x86/kernel/traps.c - Exception Handling
-23. arch/x86/kernel/irq.c - Interrupt Handling
-24. arch/x86/kernel/process.c - Context Switching
-25. arch/x86/kernel/cpu/ - CPU Detection
-26. arch/x86/kernel/apic/ - APIC (Interrupt Controller)
-
----
-
 ### arch/x86/mm/ IN PROGRESS (33% - 2/6):
 27. arch/x86/mm/fault.c - x86 Page Fault Handling
 28. arch/x86/mm/pgtable.c - x86 Page Tables
