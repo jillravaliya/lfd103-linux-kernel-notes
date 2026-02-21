@@ -14,8 +14,7 @@ Here's where we are in this series:
 
 ```
 04-device-drivers/
-├── 00-foundation/
-│   ├── device-model/     <- device registration in the kernel
+├── 00-foundation/        <- device registration in the kernel
 │   └── driver-core/      <- hardware exposed as files    (THIS!)
 ├── 01-input/             <- input events to userspace
 ├── 02-block/             <- storage read and write
