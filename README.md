@@ -73,7 +73,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **[05-device-drivers/](./05-device-drivers)** 🚧
+### **[05-device-drivers/](./05-device-drivers)** 
 > Writing kernel modules: character devices, talking to hardware, and not crashing the kernel.
 
 **Covers:**
