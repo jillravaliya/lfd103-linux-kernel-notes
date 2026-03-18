@@ -1,4 +1,4 @@
-# Linux Kernel Development Notes
+# Linux Kernel Internals 
 
 ![Topics](https://img.shields.io/badge/Topics-07-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=grey)
 ![Focus](https://img.shields.io/badge/Focus-Kernel%20Development-EE4444?style=for-the-badge&logo=target&logoColor=white&labelColor=grey)
