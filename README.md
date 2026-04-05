@@ -84,7 +84,7 @@ This isn't a tutorial or course summary. It's a reference for understanding the 
 
 ---
 
-### **[06-filesystem-layer/](./06-filesystem-layer)** 🚧
+### **[06-filesystem-layer/](./06-filesystem-layer)** 
 > How files actually work: from open() to disk blocks, the layers between /dev and ext4.
 
 **Covers:**
