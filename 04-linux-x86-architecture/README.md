@@ -193,19 +193,6 @@ Generic kernel works on BOTH architectures!
 
 ---
 
-### **[entry/](./entry)**
-> Modern system call entry optimizations and security features.
-
-**Covers:**
-- Modern entry code architecture
-- Performance optimizations
-- KPTI (Kernel Page Table Isolation) security
-- Entry/exit trampolines
-
-**Why essential:** See how modern kernels optimize for Spectre/Meltdown!
-
----
-
 ### **[boot/](./boot)**
 > From power-on to kernel — BIOS/UEFI interaction and early initialization.
 
